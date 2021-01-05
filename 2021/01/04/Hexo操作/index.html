@@ -176,7 +176,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 04, 2021</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1069</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1114</span>
     </div>
   </div>
 </section>
@@ -200,8 +200,12 @@
 
 <h2 id="3、Hexo常用命令"><a href="#3、Hexo常用命令" class="headerlink" title="3、Hexo常用命令"></a>3、Hexo常用命令</h2><p>参考：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a><br>①新建一个网站。如果没有设置folder，Hexo默认在目前的文件夹建立网站：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">hexo init [folder]<br></code></pre></td></tr></table></figure>
-<p>②新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<p>②新建一篇文章。如果没有设置layout的话，默认使用_config.yml中的default_layout参数代替。</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">hexo new [layout] &lt;<span class="hljs-built_in">title</span>&gt;<br></code></pre></td></tr></table></figure>
+<p>如果标题包含空格的话，需要使用引号括起来，如下：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">hexo new &quot;Android Multidex原理及实现&quot;<br></code></pre></td></tr></table></figure>
+
+
 <h2 id="4、zhaoo主题的使用"><a href="#4、zhaoo主题的使用" class="headerlink" title="4、zhaoo主题的使用"></a>4、zhaoo主题的使用</h2><p>参考：<a target="_blank" rel="noopener" href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/">https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/</a><br>1、修改文章页面，内容区域的宽度<br>修改/themes/master/source/css/_pages/_post/article.styl</p>
 <figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs styl">.article-wrap<br>  @media (<span class="hljs-attribute">min-width</span> <span class="hljs-number">768px</span>)<br>    <span class="hljs-attribute">margin-top</span> <span class="hljs-number">0px</span><br>    <span class="hljs-attribute">margin-left</span> -<span class="hljs-number">120px</span>  # 修改这两行<br>    <span class="hljs-attribute">margin-right</span> -<span class="hljs-number">80px</span><br></code></pre></td></tr></table></figure>
       </section>
@@ -222,7 +226,7 @@
         
   <nav class="nav">
     <a href="/2021/01/05/%E5%B9%B2%E8%B4%A7%E6%B1%87%E6%80%BB/"><i class="iconfont iconleft"></i>干货汇总</a>
-    <a href="/2021/01/04/Arrays%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/">Arrays用法详解<i class="iconfont iconright"></i></a>
+    <a href="/2021/01/04/%E5%B8%B8%E7%94%A8%E7%B1%BB-Arrays/">常用类-Arrays<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
