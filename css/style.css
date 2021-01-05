@@ -1338,10 +1338,10 @@ body span {
 .post .post-item .post-wrap .post-content {
   position: relative;
   padding: 20px;
-  height: 180px;
+  height: 150px;
 }
 .post .post-item .post-wrap .post-content-wrap {
-  height: 110px;
+  height: 80px;
   overflow: hidden;
 }
 .post .post-item .post-wrap .post-content .post-title {
