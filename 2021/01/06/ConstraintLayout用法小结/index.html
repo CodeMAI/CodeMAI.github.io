@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ConstraintLayout用法小结 - Mr.Ding的博客</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="约束布局（ConstraintLayout）通过使用A...">
+  <meta name="author" content="Mr.Ding">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/tomorrow-night.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome.jpg',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">ConstraintLayout用法小结</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright">路漫漫其修远兮，吾将上下而求索</div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">ConstraintLayout用法小结</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 06, 2021</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5355</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <p style="text-indent:2em">约束布局（ConstraintLayout）通过使用Android Studio中的可视化编辑器来为您生成绝大多数的UI，进而达到简化Android中创建复杂布局的目的。它通常被我们描述为更加强大的RelativeLayout。通过使用约束布局，开发者可以定义一些复杂的布局而不需要创建复杂的视图层级。
+
+<h2 id="1、相对定位"><a href="#1、相对定位" class="headerlink" title="1、相对定位"></a>1、相对定位</h2><p>layout_constraintLeft_toLeftOf、layout_constraintLeft_toRightOf<br>layout_constraintRight_toLeftOf、layout_constraintRight_toRightOf<br>layout_constraintTop_toTopOf、layout_constraintTop_toBottomOf<br>layout_constraintBottom_toTopOf、layout_constraintBottom_toBottomOf<br>layout_constraintStart_toEndOf、layout_constraintStart_toStartOf<br>layout_constraintEnd_toStartOf、layout_constraintEnd_toEndOf<br>layout_constraintBaseline_toBaselineOf<br>&emsp;&emsp;以上几个属性是定义当前View的位置的，以layout_constraintLeft_toLeftOf为例，constraintLeft代表当前view的左侧，toLeftOf与代表目标view的左侧对齐，所以此属性的作用是当前view的左侧与目标view的左侧对齐。<br>&emsp;&emsp;如下，是让View居中的做法：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tv&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">app:layout_constraintLeft_toLeftOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">app:layout_constraintRight_toRightOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;全局居中&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure>
+<h2 id="2、约束力的强度"><a href="#2、约束力的强度" class="headerlink" title="2、约束力的强度"></a>2、约束力的强度</h2><p>&emsp;&emsp;如果想要让控件的左右或者上下间距具有固定的比例，这种即在某个方向上其两边的约束力的强度有所不同，可以依靠layout_constraintHorizontal_bias和layout_constraintVertical_bias两个属性来设置控件在水平和垂直方向的偏移量。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tv&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintLeft_toLeftOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintRight_toRightOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintHorizontal_bias</span>=<span class="hljs-string">&quot;0.9&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintVertical_bias</span>=<span class="hljs-string">&quot;0.1&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;全局居中&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;按照上面水平偏移0.9，垂直偏移0.1后的效果就是TextView在父布局的右上角。</p>
+<h2 id="3、layout-goneMargin…"><a href="#3、layout-goneMargin…" class="headerlink" title="3、layout_goneMargin…"></a>3、layout_goneMargin…</h2><p>&emsp;&emsp;有这样一个需求：当某个控件A存在时，下面的控件B距离A需要30dp，当A消失时(gone)，此时间距需要变为10dp，之前我们可以用代码去动态改变这个间距，但是在ConstraintLayout中我们可以通过layout_goneMargin…去满足这一需求。<br>&emsp;&emsp;以app:layout_goneMarginTop为例，它表示如果依赖的顶部控件隐藏了，当前View与上面控件的间距。此时margin_top就不再生效了。所以我们可以用以下代码满足上面的需求：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tv1&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintLeft_toLeftOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:visibility</span>=<span class="hljs-string">&quot;gone&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;顶部&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">TextView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tv2&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;wrap_content&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;wrap_content&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_marginTop</span>=<span class="hljs-string">&quot;30dp&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_goneMarginTop</span>=<span class="hljs-string">&quot;10dp&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintLeft_toLeftOf</span>=<span class="hljs-string">&quot;@id/tv1&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintTop_toBottomOf</span>=<span class="hljs-string">&quot;@id/tv1&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;底部&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;当tv1显示时，tv2距顶部30dp+tv1的高度，当tv1隐藏时，tv2距顶部高度为10dp。</p>
+<h2 id="4、控件之间的宽高占比"><a href="#4、控件之间的宽高占比" class="headerlink" title="4、控件之间的宽高占比"></a>4、控件之间的宽高占比</h2><h2 id="5、百分比布局"><a href="#5、百分比布局" class="headerlink" title="5、百分比布局"></a>5、百分比布局</h2><h3 id="5-1、子控件与父控件的占比"><a href="#5-1、子控件与父控件的占比" class="headerlink" title="5.1、子控件与父控件的占比"></a>5.1、子控件与父控件的占比</h3><p>&emsp;&emsp;我们可以用layout_constraintHeight_percent、layout_constraintHeight_percent两个属性来指定控件的宽度或高度占父控件空间的百分比，属性值在0到1之间：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/view&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;0dp&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintHeight_percent</span>=<span class="hljs-string">&quot;0.5&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:background</span>=<span class="hljs-string">&quot;@android:color/darker_gray&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;上面的view占父控件高度的一半。</p>
+<h3 id="5-2、控件之间的宽高占比"><a href="#5-2、控件之间的宽高占比" class="headerlink" title="5.2、控件之间的宽高占比"></a>5.2、控件之间的宽高占比</h3><p>&emsp;&emsp;ConstraintLayout也可以像LinearLayout的layout_weight属性一样控制子控件之间的宽高占比，对应的属性是：layout_constraintHorizontal_weight和layout_constraintVertical_weight。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tv1&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;0dp&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintLeft_toLeftOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintVertical_weight</span>=<span class="hljs-string">&quot;2&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintBottom_toTopOf</span>=<span class="hljs-string">&quot;@+id/tv2&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;顶部&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">TextView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tv2&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;0dp&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintLeft_toLeftOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintBottom_toBottomOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">     <span class="hljs-attr">app:layout_constraintVertical_weight</span>=<span class="hljs-string">&quot;1&quot;</span></span><br><span class="hljs-tag">     <span class="hljs-attr">app:layout_constraintTop_toBottomOf</span>=<span class="hljs-string">&quot;@id/tv1&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;底部&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;注意：需要两个控件互相关联时，app:layout_constraint…_weight属性才能生效，如上。</p>
+<h3 id="5-3、内部百分比"><a href="#5-3、内部百分比" class="headerlink" title="5.3、内部百分比"></a>5.3、内部百分比</h3><p>&emsp;&emsp;我们经常会遇到这样的需求：要求ImageView以宽高16:9来适配，在ConstraintLayout中我们可以直接使用如下方法：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ImageView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/iv&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;0dp&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">app:layout_constraintDimensionRatio</span>=<span class="hljs-string">&quot;h,16:9&quot;</span>/&gt;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;上面layout_constraintDimensionRatio的值里面的h和w是什么意思呢？<br>&emsp;&emsp;一般来说，加上h的意思就是，h之后的比例是以w为基础去设置h，即h = w * ratio。反之，写上w的意思是，w = h / ratio （因为ratio = w / h代表宽高比）。</p>
+<h3 id="5-4、百分比结合"><a href="#5-4、百分比结合" class="headerlink" title="5.4、百分比结合"></a>5.4、百分比结合</h3><p>&emsp;&emsp;那如果要求Vide的整体大小为布局宽的一半，而且内部还按照16:9的比例进行分配，怎么实现呢？很简单，只需要把上面两个结合即可：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ImageView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/iv&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;0dp&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;0dp&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">&quot;parent&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">app:layout_constraintWidth_percent</span>=<span class="hljs-string">&quot;0.5&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">app:layout_constraintDimensionRatio</span>=<span class="hljs-string">&quot;h,16:9&quot;</span>/&gt;</span><br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2021/01/05/WebView-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">WebView-基本使用方法<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-text">1、相对定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%BA%A6%E6%9D%9F%E5%8A%9B%E7%9A%84%E5%BC%BA%E5%BA%A6"><span class="toc-text">2、约束力的强度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81layout-goneMargin%E2%80%A6"><span class="toc-text">3、layout_goneMargin…</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%8E%A7%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%AE%BD%E9%AB%98%E5%8D%A0%E6%AF%94"><span class="toc-text">4、控件之间的宽高占比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E7%99%BE%E5%88%86%E6%AF%94%E5%B8%83%E5%B1%80"><span class="toc-text">5、百分比布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1%E3%80%81%E5%AD%90%E6%8E%A7%E4%BB%B6%E4%B8%8E%E7%88%B6%E6%8E%A7%E4%BB%B6%E7%9A%84%E5%8D%A0%E6%AF%94"><span class="toc-text">5.1、子控件与父控件的占比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2%E3%80%81%E6%8E%A7%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%AE%BD%E9%AB%98%E5%8D%A0%E6%AF%94"><span class="toc-text">5.2、控件之间的宽高占比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3%E3%80%81%E5%86%85%E9%83%A8%E7%99%BE%E5%88%86%E6%AF%94"><span class="toc-text">5.3、内部百分比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4%E3%80%81%E7%99%BE%E5%88%86%E6%AF%94%E7%BB%93%E5%90%88"><span class="toc-text">5.4、百分比结合</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright">路漫漫其修远兮，吾将上下而求索</div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
