@@ -1371,8 +1371,8 @@ body span {
 @media (min-width: 768px) {
   .article-wrap {
     margin-top: 70px;
-    margin-left: -120px;
-    margin-right: -80px;
+    margin-left: -320px;
+    margin-right: -220px;
   }
 }
 @media (min-width: 800px) {
@@ -1393,7 +1393,7 @@ body span {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 66%;
+  padding-bottom: 33%;
 }
 .article .wrap .head img {
   position: absolute;
@@ -1733,7 +1733,7 @@ body span {
   top: 70px;
   background-color: var(--color-background);
   z-index: 10;
-  padding: 20px;
+  padding: 10px;
   height: calc(100vh - 140px);
   overflow: scroll;
 }
