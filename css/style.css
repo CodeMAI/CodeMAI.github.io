@@ -1283,10 +1283,12 @@ body span {
 }
 .post .post-item .post-wrap:hover {
   box-shadow: 0 16px 32px 0 rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 .post .post-item .post-wrap {
   box-shadow: 0 5px 40px -1px rgba(2,10,18,0.11);
   background-color: var(--color-background);
+  border-radius: 8px;
 }
 .post .post-item .post-wrap .post-top {
   z-index: 10;
@@ -1317,7 +1319,7 @@ body span {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 66%;
+  padding-bottom: 45%;
 }
 .post .post-item .post-wrap .post-image img {
   position: absolute;
@@ -1327,6 +1329,8 @@ body span {
   height: 100%;
   overflow: hidden;
   object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .post .post-item .post-wrap .post-image img,
 .post .post-item .post-wrap .post-image img:hover {
@@ -1337,15 +1341,15 @@ body span {
 }
 .post .post-item .post-wrap .post-content {
   position: relative;
-  padding: 20px;
-  height: 150px;
+  padding: 10px;
+  height: wrap;
 }
 .post .post-item .post-wrap .post-content-wrap {
-  height: 80px;
+  height: 70px;
   overflow: hidden;
 }
 .post .post-item .post-wrap .post-content .post-title {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 .post .post-item .post-wrap .post-content .post-title a {
   display: -webkit-box;
@@ -1354,18 +1358,20 @@ body span {
   overflow: hidden;
 }
 .post .post-item .post-wrap .post-content .post-excerpt p {
+  font-size: 0.9em;
   color: var(--color-text-secondary);
 }
 .post .post-item .post-wrap .post-content .post-info {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   color: var(--color-text-third);
 }
 .post .post-item .post-wrap .post-content .post-info .post-info-item {
   margin-right: 10px;
+  font-size: 0.8em;
 }
 .post .post-item .post-wrap .post-content .post-info .post-info-item i {
-  font-size: 1em;
+  font-size: 0.8em;
   margin-right: 5px;
 }
 @media (min-width: 768px) {
