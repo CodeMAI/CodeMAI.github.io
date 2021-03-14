@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>标准函数 - Mr.Ding的博客</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="&emsp;&emsp;Kotlin标准函数是指Sta...">
+  <meta name="author" content="Mr.Ding">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/tomorrow-night.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome.jpg',
+          api: ''
+        },
+        motto: {
+          default: 'If you have a dream,you got to protect it.',
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">标准函数</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright">路漫漫其修远兮，吾将上下而求索</div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/kotlin1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">标准函数</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>February 26, 2021</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2256</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <p>&emsp;&emsp;Kotlin标准函数是指Standard.kt文件中定义的函数，包括let、with、run、apply、also等，开发者可以自由地调用它们。下面我们来一一讲解这几个函数的用法。</p>
+<h2 id="1、let函数"><a href="#1、let函数" class="headerlink" title="1、let函数"></a>1、let函数</h2><p>&emsp;&emsp;let函数的实际上是一个作用域函数，当你需要去定义一个变量在一个特定的作用域范围内，let函数的是一个不错的选择；let函数另一个作用就是可以避免写一些判断null的操作。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-comment">/*场景1*/</span><br>list?.let &#123;  <span class="hljs-comment">//表示list不为null的条件下，才会去执行let函数体</span><br>  dataList.addAll(it)<br>&#125;<br><br><span class="hljs-comment">/*场景2*/</span><br>student?.setName(<span class="hljs-string">&quot;张三&quot;</span>)<br>student?.setAge(<span class="hljs-number">18</span>)<br>student?.setNumber(<span class="hljs-number">123456</span>)<br><span class="hljs-comment">//以上代码使用let后</span><br>student?.let &#123;<br>  it.setName(<span class="hljs-string">&quot;张三&quot;</span>)<br>  it.setAge(<span class="hljs-number">18</span>)<br>  it.setNumber(<span class="hljs-number">123456</span>)<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="2、also函数"><a href="#2、also函数" class="headerlink" title="2、also函数"></a>2、also函数</h2><p>&emsp;&emsp;also函数的结构实际上和let很像，唯一的区别就是返回值的不一样，let是以闭包的形式返回，返回函数体内最后一行的值，如果最后一行为空就返回一个Unit类型的默认值。而also函数返回的则是传入对象的本身。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> result = <span class="hljs-string">&quot;HelloWorld&quot;</span>.also &#123;<br>  it.length<br>&#125;<br>println(result)  <span class="hljs-comment">//HelloWorld，而不是10</span><br></code></pre></td></tr></table></figure>
+<h2 id="3、with函数"><a href="#3、with函数" class="headerlink" title="3、with函数"></a>3、with函数</h2><p>&emsp;&emsp;with函数不是以扩展的形式存在的。它是将某对象作为函数的参数，在函数块内可以通过this指代该对象。返回值为函数块的最后一行或指定return表达式。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-comment">//定义Person类</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>(<span class="hljs-keyword">var</span> name : String, <span class="hljs-keyword">var</span> age : <span class="hljs-built_in">Int</span>)<br><br><span class="hljs-comment">//一般写法</span><br><span class="hljs-keyword">var</span> person = Person(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">100</span>)<br><span class="hljs-keyword">var</span> result = person.name + person.age<br>println(result)<br><br><span class="hljs-comment">//with写法</span><br><span class="hljs-keyword">var</span> result = with(Person(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">18</span>)) &#123;<br>  name + age<br>&#125;<br>println(result)  <span class="hljs-comment">//张三18</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;with函数适用于调用同一个类的多个方法时，可以省去类名重复，直接调用类的方法即可，经常用于Android中RecyclerView中onBinderViewHolder中，数据model的属性映射到UI上。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-comment">//一般写法</span><br><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onBindViewHolder</span><span class="hljs-params">(holder: <span class="hljs-type">ViewHolder</span>, position: <span class="hljs-type">Int</span>)</span></span>&#123;<br>  <span class="hljs-keyword">val</span> item = getItem(position)?: <span class="hljs-keyword">return</span><br>  holder.nameView.text = <span class="hljs-string">&quot;姓名：<span class="hljs-subst">$&#123;item.name&#125;</span>&quot;</span><br>  holder.ageView.text = <span class="hljs-string">&quot;年龄：<span class="hljs-subst">$&#123;item.age&#125;</span>&quot;</span><br>&#125;<br><br><span class="hljs-comment">//with写法</span><br><span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onBindViewHolder</span><span class="hljs-params">(holder: <span class="hljs-type">ViewHolder</span>, position: <span class="hljs-type">Int</span>)</span></span>&#123;<br>  <span class="hljs-keyword">val</span> item = getItem(position)?: <span class="hljs-keyword">return</span><br>  with(item)&#123;<br>   holder.nameView.text = <span class="hljs-string">&quot;姓名：<span class="hljs-variable">$name</span>&quot;</span><br>    holder.ageView.text = <span class="hljs-string">&quot;年龄：<span class="hljs-variable">$age</span>&quot;</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="4、run函数"><a href="#4、run函数" class="headerlink" title="4、run函数"></a>4、run函数</h2><p>&emsp;&emsp;run函数实际上可以说是let和with两个函数的结合体，run函数只接收一个lambda函数为参数，以闭包形式返回，返回值为最后一行的值或者指定的return的表达式。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> result = Person(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">18</span>).run &#123;<br>  <span class="hljs-string">&quot;<span class="hljs-variable">$name</span>：<span class="hljs-variable">$age</span>&quot;</span><br>&#125;<br>println(result)  <span class="hljs-comment">//张三：18</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;run函数弥补了let函数在函数体内必须使用it参数替代对象，可以像with函数一样可以省略，直接访问实例的公有属性和方法，另一方面它弥补了with函数传入对象判空问题，在run函数中可以像let函数一样做判空处理。</p>
+<h2 id="5、apply函数"><a href="#5、apply函数" class="headerlink" title="5、apply函数"></a>5、apply函数</h2><p>&emsp;&emsp;从结构上来看apply函数和run函数很像，唯一不同点就是它们各自返回的值不一样，run函数是以闭包形式返回最后一行代码的值，而apply函数的返回的是传入对象的本身</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> person = Person(<span class="hljs-string">&quot;默认值&quot;</span>, <span class="hljs-number">0</span>).apply &#123;<br>  name = <span class="hljs-string">&quot;张三&quot;</span><br>  age = <span class="hljs-number">10</span><br>&#125;<br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kotlin/" rel="tag">Kotlin</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2021/03/04/Kotlin/%E5%8D%8F%E7%A8%8B/"><i class="iconfont iconleft"></i>协程</a>
+    <a href="/2021/02/26/Kotlin/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Lambda表达式<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81let%E5%87%BD%E6%95%B0"><span class="toc-text">1、let函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81also%E5%87%BD%E6%95%B0"><span class="toc-text">2、also函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81with%E5%87%BD%E6%95%B0"><span class="toc-text">3、with函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81run%E5%87%BD%E6%95%B0"><span class="toc-text">4、run函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81apply%E5%87%BD%E6%95%B0"><span class="toc-text">5、apply函数</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright">路漫漫其修远兮，吾将上下而求索</div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

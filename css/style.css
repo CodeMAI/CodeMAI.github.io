@@ -1279,7 +1279,9 @@ body span {
   }
 }
 .post .post-item {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .post .post-item .post-wrap:hover {
   box-shadow: 0 16px 32px 0 rgba(0,0,0,0.1);
