@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LifeCycle - Mr.Ding的博客</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="在Activity中，我们会在生命周期方法中处理相关业...">
+  <meta name="author" content="Mr.Ding">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/tomorrow-night.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome.jpg',
+          api: ''
+        },
+        motto: {
+          default: 'If you have a dream,you got to protect it.',
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">LifeCycle</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright">路漫漫其修远兮，吾将上下而求索</div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/android.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">LifeCycle</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 05, 2021</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5274</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <p style="text-indent:2em">在Activity中，我们会在生命周期方法中处理相关业务逻辑，这种方式会导致代码条理性很差而且会扩散错误。Android Jetpack中推出了Lifecycle-Aware组件，它可以感知Activity和Fragment的生命周期状态的改变，我们可以在它的内部去实现对应的生命周期方法中的业务，从而达到解耦页面与组件的效果。
+
+<h2 id="1、LifeCycle基本用法"><a href="#1、LifeCycle基本用法" class="headerlink" title="1、LifeCycle基本用法"></a>1、LifeCycle基本用法</h2><h3 id="1-1、Java1-8用法"><a href="#1-1、Java1-8用法" class="headerlink" title="1.1、Java1.8用法"></a>1.1、Java1.8用法</h3><p>&emsp;&emsp;如果开发环境是Java1.8，推荐使用以实现DefaultLifecycleObserver接口的方式来监听生命周期的变化，首先在对应module的build.gradle文件文件中引入：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle">implementation <span class="hljs-string">&quot;android.arch.lifecycle:common-java8:1.1.1&quot;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后，创建生命周期监听器如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestLifecycleListener</span>: <span class="hljs-type">DefaultLifecycleObserver &#123;</span></span><br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>    println(<span class="hljs-string">&quot;onCreate&quot;</span>)<br>  &#125;<br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStart</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>    println(<span class="hljs-string">&quot;onStart&quot;</span>)<br>  &#125;<br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onResume</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>    println(<span class="hljs-string">&quot;onResume&quot;</span>)<br>  &#125;<br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onPause</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>    println(<span class="hljs-string">&quot;onPause&quot;</span>)<br>  &#125;<br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStop</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>    println(<span class="hljs-string">&quot;onStop&quot;</span>)<br>  &#125;<br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>    println(<span class="hljs-string">&quot;onDestroy&quot;</span>)<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;最后，在对应的Activity或Fragment中注册该监听器，如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> listener = TestLifecycleListener()<br>getLifecycle().addObserver(listener)<br></code></pre></td></tr></table></figure>
+<h3 id="1-2、Java1-7用法"><a href="#1-2、Java1-7用法" class="headerlink" title="1.2、Java1.7用法"></a>1.2、Java1.7用法</h3><p>&emsp;&emsp;如果开发环境是 Java1.7，可以使用注解的方式来监听生命周期变化，如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestLifecycleListener</span>: <span class="hljs-type">LifecycleObserver &#123;</span></span><br>  <span class="hljs-meta">@OnLifecycleEvent(Lifecycle.Event.ON_CREATE)</span><br>  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>    println(<span class="hljs-string">&quot;onCreate&quot;</span>)<br>  &#125;<br>  <span class="hljs-comment">/* 其他生命周期注解省略 */</span><br>  <span class="hljs-meta">@OnLifecycleEvent(Lifecycle.Event.ON_ANY)</span><br>  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onAny</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>, event: <span class="hljs-type">Lifecycle</span>.<span class="hljs-type">Event</span>)</span></span> &#123;  <span class="hljs-comment">//此注解下的函数，任何生命周期状态发生变化都会触发</span><br>    println(<span class="hljs-string">&quot;onAny():<span class="hljs-subst">$&#123;event.name&#125;</span>&quot;</span>)  <span class="hljs-comment">//onAny方法的第二个参数，用来获取当前生命周期</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="2、Lifecycle源码分析"><a href="#2、Lifecycle源码分析" class="headerlink" title="2、Lifecycle源码分析"></a>2、Lifecycle源码分析</h2><p>&emsp;&emsp;LifecycleOwner是一个接口，表示实现该接口的类具有生命周期，如所有继承自AppCompatActivity的Activity都间接实现了LifecycleOwner接口(AppCompatActivity继承于FragmentActivity、FragmentActivity继承于ComponentActivity，ComponentActivity实现了LifecycleOwner接口)。<br>&emsp;&emsp;从上文中可知使用getLifecycle()获取到是Lifecycle的具体实现类LifecycleRegistry对象，然后使用addObserver添加LifecycleObserver对象，也就是添加要通知的观察者，之后Activity或Fragment命周期发生变化时观察者才会被通知。</p>
+<h2 id="3、LifecycleService基本用法"><a href="#3、LifecycleService基本用法" class="headerlink" title="3、LifecycleService基本用法"></a>3、LifecycleService基本用法</h2><p>&emsp;&emsp;拥有生命周期概念的组件，除了Activity和Fragment外，还有一个非常重要的组件：Service。为了方便我们对Service生命周期的监听，Android提供了一个名为LifecycleService的类，该类继承自Service，并实现LifecycleOwner接口，源码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LifecycleService</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Service</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">LifecycleOwner</span> </span>&#123;<br>  <span class="hljs-comment">//...</span><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> Lifecycle <span class="hljs-title">getLifecycle</span><span class="hljs-params">()</span> </span>&#123;  <span class="hljs-comment">//与Activity/Fragment类似，它也提供了一个名为getLifecycle()方法供我们使用</span><br>    <span class="hljs-keyword">return</span> mDispatcher.getLifecycle();<br>  &#125;<br>  <span class="hljs-comment">//...</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;下面让我们一起来看看，LifecycleService该如何使用：<br>&emsp;&emsp;由于LifecycleService存在于扩展包中，所以首先我们需要在app的build.gradle文件中添加依赖：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle">implementation <span class="hljs-string">&quot;android.arch.lifecycle:extensions:1.1.1&quot;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;接下来我们实现一个MyServiceObserver类，该类需要实现LifecycleObserver接口：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyServiceObserver</span>: <span class="hljs-type">DefaultLifecycleObserver &#123;</span></span><br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>    println(<span class="hljs-string">&quot;onCreate&quot;</span>)<br>  &#125;<br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;<br>     println(<span class="hljs-string">&quot;onDestroy&quot;</span>)<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后我们去实现一个MyService类，继承于LifecycleService，它是Service的直接子类，使用起来与普通Service没有差别：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyService</span>: <span class="hljs-type">LifecycleService</span></span>() &#123;<br>  <span class="hljs-keyword">private</span> <span class="hljs-keyword">lateinit</span> <span class="hljs-keyword">var</span> serviceObserver: MyServiceObserver<br>  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">MyService</span><span class="hljs-params">()</span></span> &#123;<br>    serviceObserver = MyServiceObserver()<br>    lifecycle.addObserver(serviceObserver)  <span class="hljs-comment">//添加观察者</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;以上就是LifecycleService的用法，当我们启动、停止Service时，MyServiceObserver中相应的方法会进行响应：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">startService</span><span class="hljs-params">()</span></span> &#123;<br>  <span class="hljs-keyword">val</span> intent = Intent(context, MyService::<span class="hljs-keyword">class</span>.java)<br>  context.startService(intent)<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">stopService</span><span class="hljs-params">()</span></span> &#123;<br>  <span class="hljs-keyword">val</span> intent = Intent(context, MyService::<span class="hljs-keyword">class</span>.java)<br>  context.stopService(intent)<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="4、ProcessLifecycleOwner基本用法"><a href="#4、ProcessLifecycleOwner基本用法" class="headerlink" title="4、ProcessLifecycleOwner基本用法"></a>4、ProcessLifecycleOwner基本用法</h2><p>&emsp;&emsp;很多时候，我们都会遇到这样的需求：我们想要知道，应用程序当前是否处在前台还是后台，或者我们希望应用程序从后台回到前台时，能够得到通知。有不少方法能够实现该需求，但是都不够好。在此之前，Google官方并没有提供该需求的实现，直到LifeCycle的出现。LifeCycle提供了一个名为ProcessLifecycleOwner的类，使得我们能够方便地知道整个应用程序的生命周期情况。<br>&emsp;&emsp;ProcessLifecycleOwner的使用方式与Activity、Fragment以及Service是类似的，它也是通过观察者模式来实现的。由于我们要观察的是整个应用程序，所以我们要在Application中进行相关的代码编写：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VBlogApp</span>: <span class="hljs-type">Application</span></span>() &#123;<br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">()</span></span> &#123;<br>    <span class="hljs-keyword">super</span>.onCreate()<br>    ProcessLifecycleOwner.<span class="hljs-keyword">get</span>().lifecycle.addObserver(ApplicationObserver())<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;接下来就是ApplicationObserver类，我们定义这个类来实现LifecycleObserver接口，负责对应用程序生命周期的监听：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApplicationObserver</span>: <span class="hljs-type">DefaultLifecycleObserver &#123;</span></span><br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;&#125;   <span class="hljs-comment">//在应用程序的整个生命周期中只会被调用一次</span><br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStart</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;&#125;  <span class="hljs-comment">//应用程序出现到前台时调用</span><br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onResume</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;&#125;  <span class="hljs-comment">//应用程序出现到前台时调用</span><br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onPause</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;&#125;  <span class="hljs-comment">//应用程序退出到后台时调用</span><br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStop</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;&#125;  <span class="hljs-comment">//应用程序退出到后台时调用</span><br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">(owner: <span class="hljs-type">LifecycleOwner</span>)</span></span> &#123;&#125;  <span class="hljs-comment">//永远不会被调用到</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;ProcessLifecycleOwner针对的是整个应用程序的监听，与Activity数量无关，它的生命周期调用如下：<br>①在整个生命周期，onCreate只会被调用一次，而onDestroy永远不会被调用到；<br>②当应用程序从后台回到前台，或者应用程序首次打开，会依次调用onStart、onResume<br>③当应用程序从前台退到后台，会依次调用onPause、onStop，需要注意的是，这两个方法的调用会有一定的延后，因为系统需要为屏幕旋转，配置发生变化导致Activity重新创建预留一些时间，也就是说，系统需要保证由于屏幕旋转，导致Activity重新创建时，这两个事件不会被调用到。旋转屏幕，你的应用程序并没有退到后台，它只是进入了横/竖屏模式而已。<br>&emsp;&emsp;通过ProcessLifecycleOwner，我们可以知道应用程序何时退到后台，以及何时进入前台，进而执行一些业务操作。它使用起来非常简单，并且不会给项目增加任何的耦合度。</p>
+
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jetpack/" rel="tag">Jetpack</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2021/01/05/Android-Multidex%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/"><i class="iconfont iconleft"></i>Android Multidex原理及实现</a>
+    <a href="/2021/01/05/%E5%B9%B2%E8%B4%A7%E6%B1%87%E6%80%BB/">干货汇总<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81LifeCycle%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">1、LifeCycle基本用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E3%80%81Java1-8%E7%94%A8%E6%B3%95"><span class="toc-text">1.1、Java1.8用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E3%80%81Java1-7%E7%94%A8%E6%B3%95"><span class="toc-text">1.2、Java1.7用法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Lifecycle%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-text">2、Lifecycle源码分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81LifecycleService%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">3、LifecycleService基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81ProcessLifecycleOwner%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">4、ProcessLifecycleOwner基本用法</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright">路漫漫其修远兮，吾将上下而求索</div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

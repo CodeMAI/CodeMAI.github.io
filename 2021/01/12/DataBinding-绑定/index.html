@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DataBinding-绑定 - Mr.Ding的博客</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="1、为什么要用DataBinding&emsp;&em...">
+  <meta name="author" content="Mr.Ding">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/tomorrow-night.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome.jpg',
+          api: ''
+        },
+        motto: {
+          default: 'If you have a dream,you got to protect it.',
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">DataBinding-绑定</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright">路漫漫其修远兮，吾将上下而求索</div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/android.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">DataBinding-绑定</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 12, 2021</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5264</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h2 id="1、为什么要用DataBinding"><a href="#1、为什么要用DataBinding" class="headerlink" title="1、为什么要用DataBinding"></a>1、为什么要用DataBinding</h2><p>&emsp;&emsp;2020年的3月份JakeWharton开源的ButterKnife被官宣停止维护，在github上说明推荐使用ViewBinding，那么ViewBinding是什么呢？<br>&emsp;&emsp;DataBinding是Google提供的将视图和数据绑定的支持库，主要是为了简化代码，去除findViewById()等样式代码的调用。它具有以下的优势：<br>• 项目更简洁，可读性更高。部分与UI组件相关的代码可在布局文件中完成。<br>• 不再需要findViewById()。<br>• 布局文件可以包含简单的业务逻辑。UI组件能直接与数据模型中的字段绑定,甚至能响应用户的交互。</p>
+<p>&emsp;&emsp;为什么不推荐其他替换方案，而推荐ViewBinding呢？总结一下，所谓的其他替代方案，除了ButterKnife、ViewBinding，常用的就剩下findViewById、Kotlin Android Extensions了。<br>&emsp;&emsp;先说ButterKnife，在文章最开始就说明了，这个已经被官宣不在维护了，而且他的缺点其实也是有的，依然有着不安全的属性，同时，使用ButterKnife代码量其实也少不了多少，只是使用注解的方式，显得优雅一些。<br>&emsp;&emsp;而findViewById的缺点也明显，一个是过于冗余，findViewById对应所有的View都需要书写findViewById(R.id.xxx)的方法，而且它也不安全，首先是空类型的不安全，findViewById有可能返回为null，导致程序异常，其次是强转的不安全，findViewById将对应的id需要强转成对应的View，如果开发者类型给错，就会出现异常。例如</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> imageView = findViewById&lt;TextView&gt;(R.id.imageView)  <span class="hljs-comment">//将ImageView类型的组件，错给了TextView类型</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;至于Kotlin Android Extensions，大家写Kotlin肯定使用过，这个是很方便的，它可以直接使用xml的资源ID，但是在Kotlin 1.4.20-M2中，JetBrains也废弃了Kotlin Android Extensions编译插件了。</p>
+<h2 id="2、绑定组件"><a href="#2、绑定组件" class="headerlink" title="2、绑定组件"></a>2、绑定组件</h2><p>&emsp;&emsp;使用DataBinding，需要在module的build.gradle中添加一下代码：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs gradle">android &#123;<br>  dataBinding&#123;<br>    enabled = <span class="hljs-keyword">true</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;下面我们开始采用DataBinding来完成简单的绑定。<br>&emsp;&emsp;首先需要将布局文件转为DataBinding布局，方法是在布局文件的最外层布局使用option键+回车键自动转换，转换后的布局如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs XML"><span class="hljs-meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;student&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;mirror.k.vblog.entity.Student&quot;</span> /&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">LinearLayout</span> </span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:orientation</span>=<span class="hljs-string">&quot;vertical&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tv_name&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;30dp&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:gravity</span>=<span class="hljs-string">&quot;center&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@&#123;student.name&#125;&quot;</span>/&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tv_age&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;30dp&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:gravity</span>=<span class="hljs-string">&quot;center&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@&#123;Integer.toString(student.age)&#125;&quot;</span>/&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">LinearLayout</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;由于@{student.name}在布局文件中并没有明确的值，所以在预览视图中什么都不会显示，可以设定默认值展示在预览图中：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml">android:text=&quot;@&#123;student.name, default=姓名&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;上面的方式是单项绑定，当数据值改变时，视图会自动同步改变，返过来则不行。如果有需要，我们可以设置为双向绑定：当数据改变的同时视图会刷新，而视图改变时数据也可以跟着改变，例如EditText的输入内容改变时，会同步到变量进行改变，实现方式比单向绑定多了一个等号：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml">android:text=&quot;@=&#123;student.name&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后在Activity中setContentView的形式改为由DataBindingUtil去绑定布局的形式，绑定后会自动生成一个类，类名规则为布局文件名中下划线形式改为驼峰形式+Binding，如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataBindingActivity</span> <span class="hljs-title">extends</span> <span class="hljs-title">Activity</span> </span>&#123;<br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">protected</span> void onCreate(<span class="hljs-meta">@Nullable</span> Bundle savedInstanceState) &#123;<br>    <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);<br>    ActivityDataBinding binding = DataBindingUtil.setContentView(<span class="hljs-keyword">this</span>, R.layout.activity_data);<br>    binding.setStudent(new Student(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">18</span>));  <span class="hljs-comment">//直接设置Data，自动同步到布局上</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;另外，在data标签中，如果Student类型要多处用到，也可以直接将其import进来。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">import</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;mirror.k.vblog.entity.Student&quot;</span> /&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;student1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;Student&quot;</span> /&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;student2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;Student&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h2 id="3、text属性的几种写法"><a href="#3、text属性的几种写法" class="headerlink" title="3、text属性的几种写法"></a>3、text属性的几种写法</h2><p>1、格式化字符串</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- string.xml中定义格式化 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">string</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;water_average&quot;</span>&gt;</span>近期平均用水：%.2f吨/天<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- 界面xml中绑定 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;average&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;Float&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span><br>android:text=&quot;@&#123;@string/water_average(average)&#125;&quot;<br></code></pre></td></tr></table></figure>
+<h2 id="4、二级页面绑定组件"><a href="#4、二级页面绑定组件" class="headerlink" title="4、二级页面绑定组件"></a>4、二级页面绑定组件</h2><p>&emsp;&emsp;前面我们演示的是在一级页面中绑定数据对象，那么在二级页面中该如何绑定呢？<br>&emsp;&emsp;首先我们在一级页面中定义要传递的变量bookName，这个bookName可以作为一个属性，一级页面正是通过这个属性将数据传递给二级页面的：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs XML"><span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">xmlns:app</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res-auto&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;bookName&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;String&quot;</span> /&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">LinearLayout</span> </span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:orientation</span>=<span class="hljs-string">&quot;vertical&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/lyInclude&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">layout</span>=<span class="hljs-string">&quot;@layout/layout_test&quot;</span></span><br><span class="hljs-tag">        <span class="hljs-attr">app:bookName</span>=<span class="hljs-string">&quot;@&#123;bookName&#125;&quot;</span>/&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">LinearLayout</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;在二级页面中，需要定义一个与一级页面相同的变量，用来接收数据即可：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs XML"><span class="hljs-tag">&lt;<span class="hljs-name">layout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;bookName&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;String&quot;</span> /&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span> </span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span>  <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/tvBookName&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;30dp&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:gravity</span>=<span class="hljs-string">&quot;center&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">android:text</span>=<span class="hljs-string">&quot;@&#123;bookName&#125;&quot;</span> /&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">layout</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_26923265/article/details/82627319">https://blog.csdn.net/qq_26923265/article/details/82627319</a></p>
+
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jetpack/" rel="tag">Jetpack</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2021/01/12/Intent/"><i class="iconfont iconleft"></i>Intent</a>
+    <a href="/2021/01/12/Activity-Results-API/">Activity Results API<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8DataBinding"><span class="toc-text">1、为什么要用DataBinding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%BB%91%E5%AE%9A%E7%BB%84%E4%BB%B6"><span class="toc-text">2、绑定组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81text%E5%B1%9E%E6%80%A7%E7%9A%84%E5%87%A0%E7%A7%8D%E5%86%99%E6%B3%95"><span class="toc-text">3、text属性的几种写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E4%BA%8C%E7%BA%A7%E9%A1%B5%E9%9D%A2%E7%BB%91%E5%AE%9A%E7%BB%84%E4%BB%B6"><span class="toc-text">4、二级页面绑定组件</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright">路漫漫其修远兮，吾将上下而求索</div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

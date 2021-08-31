@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MPAndroidChart-折线图 - Mr.Ding的博客</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="1、图标属性1.1、背景颜色、边框&emsp;&ems...">
+  <meta name="author" content="Mr.Ding">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/tomorrow-night.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome.jpg',
+          api: ''
+        },
+        motto: {
+          default: 'If you have a dream,you got to protect it.',
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">MPAndroidChart-折线图</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright">路漫漫其修远兮，吾将上下而求索</div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/android3.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">MPAndroidChart-折线图</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 12, 2021</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1432</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h2 id="1、图标属性"><a href="#1、图标属性" class="headerlink" title="1、图标属性"></a>1、图标属性</h2><h3 id="1-1、背景颜色、边框"><a href="#1-1、背景颜色、边框" class="headerlink" title="1.1、背景颜色、边框"></a>1.1、背景颜色、边框</h3><p>&emsp;&emsp;背景颜色分为两种，一种是整个图表视图的背景颜色，一种是内容视图的背景颜色。设置颜色时最好用ARGB完整的八位(如0xff00ff00)，否则可能会被视为”设置透明颜色”。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-comment">/*设置背景颜色(覆盖整个图表视图),可在.xml通过android:background设置*/</span><br>chartView.setBackgroundColor(Color.WHITE);<br><br><span class="hljs-comment">/*设置内容视图的背景颜色*/</span><br>chartView.setDrawGridBackground(<span class="hljs-literal">true</span>);  <span class="hljs-comment">//启用内容视图背景颜色的绘制</span><br>chartView.setGridBackgroundColor(Color.WHITE);<br><br><span class="hljs-comment">/*设置边框*/</span><br>chartView.setDrawBorders(<span class="hljs-literal">true</span>);  <span class="hljs-comment">//启用图表边框绘制</span><br>chartView.setBorderColor(Color.parseColor(<span class="hljs-string">&quot;#FFCCCCCC&quot;</span>));<br>chartView.setBorderWidth(<span class="hljs-number">1</span>);<br></code></pre></td></tr></table></figure>
+<h3 id="1-2、描述文本、空文本"><a href="#1-2、描述文本、空文本" class="headerlink" title="1.2、描述文本、空文本"></a>1.2、描述文本、空文本</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-comment">/*描述文本*/</span><br>chartView.description.isEnabled = <span class="hljs-literal">true</span>;  <span class="hljs-comment">//启用描述文本</span><br>chartView.description.setText(<span class="hljs-string">&quot;折线图&quot;</span>);<br>chartView.description.setTextColor(Color.red);<br>chartView.description.setPosition(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);  <span class="hljs-comment">//设置描述文字在屏幕上的位置</span><br>chartView.setDescriptionTextSize(<span class="hljs-number">12</span>);<br><br><span class="hljs-comment">/*空文本*/</span><br>chartView.setNoDataText(<span class="hljs-string">&quot;数据为空&quot;</span>);<br>chartView.setNoDataTextColor(Color.RED);<br></code></pre></td></tr></table></figure>
+<h2 id="2、x轴和y轴"><a href="#2、x轴和y轴" class="headerlink" title="2、x轴和y轴"></a>2、x轴和y轴</h2><h3 id="2-1-x轴设置"><a href="#2-1-x轴设置" class="headerlink" title="2.1 x轴设置"></a>2.1 x轴设置</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> xAxis = chartView.xAxis  <span class="hljs-comment">//获取x轴</span><br>xAxis.position = XAxis.XAxisPosition.BOTTOM  <span class="hljs-comment">//x轴放在底部</span><br>xAxis.setLabelCount(dataList.size)  <span class="hljs-comment">//设置x轴标签个数</span><br>xAxis.axisLineColor = ContextCompat.getColor(context, R.color.primary_value)  <span class="hljs-comment">//x轴颜色</span><br><span class="hljs-comment">//设置标签的文字大小、颜色、倾斜角度、自定义显示的字符串</span><br>xAxis.textSize = <span class="hljs-number">10f</span><br>xAxis.textColor = Color.parseColor(<span class="hljs-string">&quot;#FFCCCCCC&quot;</span>)<br>xAxis.labelRotationAngle = <span class="hljs-number">10f</span><br>xAxis.setValueFormatter(<span class="hljs-keyword">object</span> : ValueFormatter() &#123;<br>  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getAxisLabel</span><span class="hljs-params">(value: <span class="hljs-type">Float</span>, axis: <span class="hljs-type">AxisBase</span>?)</span></span>: String &#123;  <span class="hljs-comment">//其中value可以当做标签数组的索引</span><br>    <span class="hljs-keyword">return</span> dataList.<span class="hljs-keyword">get</span>(value.toInt()).day<br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AE%E5%AD%90/" rel="tag">轮子</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2021/01/12/DataBinding-%E4%BA%8B%E4%BB%B6/"><i class="iconfont iconleft"></i>DataBinding-事件</a>
+    <a href="/2021/01/12/Intent/">Intent<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9B%BE%E6%A0%87%E5%B1%9E%E6%80%A7"><span class="toc-text">1、图标属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E3%80%81%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E3%80%81%E8%BE%B9%E6%A1%86"><span class="toc-text">1.1、背景颜色、边框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E3%80%81%E6%8F%8F%E8%BF%B0%E6%96%87%E6%9C%AC%E3%80%81%E7%A9%BA%E6%96%87%E6%9C%AC"><span class="toc-text">1.2、描述文本、空文本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81x%E8%BD%B4%E5%92%8Cy%E8%BD%B4"><span class="toc-text">2、x轴和y轴</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-x%E8%BD%B4%E8%AE%BE%E7%BD%AE"><span class="toc-text">2.1 x轴设置</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright">路漫漫其修远兮，吾将上下而求索</div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

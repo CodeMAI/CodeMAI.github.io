@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WebView-基本使用方法 - Mr.Ding的博客</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="1、加载网页123456789101112131415...">
+  <meta name="author" content="Mr.Ding">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/tomorrow-night.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome.jpg',
+          api: ''
+        },
+        motto: {
+          default: 'If you have a dream,you got to protect it.',
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">WebView-基本使用方法</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright">路漫漫其修远兮，吾将上下而求索</div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/android.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">WebView-基本使用方法</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 05, 2021</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5346</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h2 id="1、加载网页"><a href="#1、加载网页" class="headerlink" title="1、加载网页"></a>1、加载网页</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java">webView.loadUrl(<span class="hljs-string">&quot;http://baidu.com&quot;</span>);<br><span class="hljs-comment">//webView.loadUrl(&quot;file:///android_asset/test.html&quot;);  //本地html存放在\src\main\assets中</span><br><span class="hljs-comment">//webView.loadUr(&quot;content://com.android.htmlfileprovider/sdcard/test.html&quot;);  //打开本地sd卡内的html文件</span><br>webView.getSettings().setJavaScriptEnabled(<span class="hljs-keyword">true</span>); <span class="hljs-comment">//设置支持js参数(若访问的页面中有js,则必须设置支持)</span><br>webView.setWebViewClient(<span class="hljs-keyword">new</span> WebViewClient()&#123;<br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">shouldOverrideUrlLoading</span><span class="hljs-params">(WebView view,String url)</span></span>&#123;<br>    view.loadUrl(url);<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;  <span class="hljs-comment">//true表示在webView打开网页,false表示调用系统浏览器或第三方浏览器打开网页</span><br>  &#125;<br>&#125;);<br><br><span class="hljs-comment">/*点击BACK健进行回退*/</span><br><span class="hljs-meta">@Override</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">onKeyDown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> keyCode,KeyEvent event)</span></span>&#123;<br>  <span class="hljs-keyword">if</span>(keyCode == KeyEvent.KEYCODE_BACK &amp;&amp; webView.canGoBack())&#123;<br>    webView.goBack(); <span class="hljs-comment">//返回上一页面,goForward()前进,reload()刷新</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>  &#125;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>关于前进/后退网页<br>webView.canGoBack()：是否可以后退<br>webView.goBack()：后退网页<br>webView.canGoForward()：是否可以前进<br>webView.goForward()：前进网页<br>webView.goBackOrForward(step)：以当前的index为起始点前进或者后退到历史记录中指定的step，step为负数则为后退，正数则为前进</p>
+<h2 id="2、支持H5定位"><a href="#2、支持H5定位" class="headerlink" title="2、支持H5定位"></a>2、支持H5定位</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">webSettings.setGeolocationEnabled(<span class="hljs-keyword">true</span>);  <span class="hljs-comment">//允许地理位置可用</span><br>webView.setWebChromeClient(<span class="hljs-keyword">new</span> WebChromeClient() &#123;<br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGeolocationPermissionsShowPrompt</span><span class="hljs-params">(String origin, GeolocationPermissions.Callback callback)</span> </span>&#123;<br>    <span class="hljs-comment">//可以在此处弹出对话框给用户选择是否同意H5获取定位信息</span><br>    callback.invoke(origin, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">false</span>);  <span class="hljs-comment">//同意位置信息给H5</span><br>    <span class="hljs-comment">//callback.invoke(origin, false, false);  //禁止位置信息给H5</span><br>    <span class="hljs-keyword">super</span>.onGeolocationPermissionsShowPrompt(origin, callback);<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="3、支持文件下载"><a href="#3、支持文件下载" class="headerlink" title="3、支持文件下载"></a>3、支持文件下载</h2><p>&emsp;&emsp;默认的WebView是不支持文件下载的，需要自己监听下载事件并对下载的动作进行处理。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileDownLoadListener</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">DownloadListener</span> </span>&#123;<br>  <span class="hljs-keyword">private</span> Context context;<br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">FileDownLoadListener</span><span class="hljs-params">(Context context)</span> </span>&#123;<br>    <span class="hljs-keyword">this</span>.context = context;<br>  &#125;<br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDownloadStart</span><span class="hljs-params">(String url, String userAgent, String contentDisposition, String mimetype, <span class="hljs-keyword">long</span> contentLength)</span> </span>&#123;<br>    <span class="hljs-comment">//使用系统自带的浏览器进行下载，当然也可以在此处自己实现下载逻辑</span><br>    Intent intent = <span class="hljs-keyword">new</span> Intent(Intent.ACTION_VIEW);<br>    intent.addCategory(Intent.CATEGORY_BROWSABLE);<br>    intent.setData(Uri.parse(url));<br>    startActivity(intent);<br>  &#125;<br>&#125;<br><br><span class="hljs-comment">/*进行事件监听*/</span><br>webView.setDownloadListener(<span class="hljs-keyword">new</span> FileDownLoadListener(<span class="hljs-keyword">this</span>));<br></code></pre></td></tr></table></figure>
+<h2 id="4、错误处理"><a href="#4、错误处理" class="headerlink" title="4、错误处理"></a>4、错误处理</h2><p>&emsp;&emsp;网页产生错误时，如无网络、连接超时、找不到页面等时，onReceivedError会被调用，所以我们可以用它来处理网页加载不出来的情况。<br>&emsp;&emsp;在Android 6.0后，Google对onReceiveError进行了一次改版重载，并且把老版本的废弃了。新版的onReceiveError能接收到的错误更多，如网页内引用其他资源（图片、css）加载错误、js执行错误等，这会导致的问题是：在Android6以上的机器上，网页中的任意一个资源获取不到（比如字体），就会回调onReceiveError方法。<br>&emsp;&emsp;那么怎么解决这种问题呢？<br>&emsp;&emsp;在新版的onReceivedError中，多了一个WebResourceRequest参数，而WebResourceRequest有一个方法叫做isForMainFrame，它能获取当前的网络请求是否是为main frame创建的。<br>&emsp;&emsp;所以，最终的代码如下这样写，可以同时兼容新旧版本：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java">webView.setWebViewClient(<span class="hljs-keyword">new</span> WebViewClient() &#123;<br>  <span class="hljs-comment">//旧版本，会在新版本中也可能被调用，所以加上一个判断，防止重复显示</span><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onReceivedError</span><span class="hljs-params">(WebView view, <span class="hljs-keyword">int</span> errorCode, String description, String failingUrl)</span> </span>&#123;<br>    <span class="hljs-keyword">super</span>.onReceivedError(view, errorCode, description, failingUrl);<br>    <span class="hljs-keyword">if</span>(Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.M)&#123;<br>      <span class="hljs-keyword">return</span>;<br>    &#125;<br>    <span class="hljs-comment">//在这里显示自定义错误页</span><br>  &#125;<br><br>  <span class="hljs-comment">//新版本，只会在Android6及以上调用</span><br>  <span class="hljs-meta">@TargetApi(Build.VERSION_CODES.M)</span><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onReceivedError</span><span class="hljs-params">(WebView view, WebResourceRequest request, WebResourceError error)</span> </span>&#123;<br>    <span class="hljs-keyword">super</span>.onReceivedError(view, request, error);<br>    <span class="hljs-keyword">if</span> (request.isForMainFrame()) &#123;<br>      <span class="hljs-comment">//在这里显示自定义错误页</span><br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="5、支持视频播放"><a href="#5、支持视频播放" class="headerlink" title="5、支持视频播放"></a>5、支持视频播放</h2><p>&emsp;&emsp;H5页面中有时会有视频嵌套，在默认的WebView中直接播放视频会有问题，这是因为没有启动硬件加速，如下进行设置即可：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">activity</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;.WebActivity&quot;</span> <span class="hljs-attr">android:hardwareAccelerated</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;此时可以进行播放了，但不能全屏，需要开发者进行处理：<br>&emsp;&emsp;首先我们需要再界面上添加一个FrameLayout用来全屏播放视频：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">WebView</span> <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/webView&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>/&gt;</span><br>&lt;FrameLayout<br>  android:id=&quot;@+id/fullVideoView&quot;<br>  android:layout_width=&quot;match_parent&quot;<br>  android:layout_height=&quot;match_parent&quot;<br>  android:visibility=&quot;gone&quot; /&gt;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后自定义WebChromeClient，用来播放全屏视频：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VWebViewChromeClient</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebChromeClient</span> </span>&#123;<br>  <span class="hljs-keyword">private</span> CustomViewCallback callback;<br>  <span class="hljs-keyword">private</span> View customView;<br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onShowCustomView</span><span class="hljs-params">(View view, CustomViewCallback callback)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (customView != <span class="hljs-keyword">null</span>) &#123;<br>      callback.onCustomViewHidden();<br>      <span class="hljs-keyword">return</span>;<br>    &#125;<br>    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);<br>    getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);  <span class="hljs-comment">//隐藏状态栏</span><br>    webView.setVisibility(View.GONE);<br>    fullVideoView.setVisibility(View.VISIBLE);<br>    fullVideoView.addView(view);<br>    <span class="hljs-keyword">this</span>.callback = callback;<br>    <span class="hljs-keyword">this</span>.customView = view;<br>  &#125;<br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onHideCustomView</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (customView == <span class="hljs-keyword">null</span>) &#123;<br>      <span class="hljs-keyword">return</span>;<br>    &#125;<br>    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);<br>    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);  <span class="hljs-comment">//显示状态栏</span><br>    <span class="hljs-keyword">if</span> (callback != <span class="hljs-keyword">null</span>)&#123;<br>      callback.onCustomViewHidden();<br>    &#125;<br>    webView.setVisibility(View.VISIBLE);<br>    fullVideoView.removeAllViews();<br>    fullVideoView.setVisibility(View.GONE);<br>    customView = <span class="hljs-keyword">null</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;最后，我们将自定义的VWebViewChromeClient配置到WebView上即可：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">webView.setWebChromeClient(<span class="hljs-keyword">new</span> VWebViewChromeClient());<br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/WebView/" rel="tag">WebView</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2021/01/06/ConstraintLayout%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93/"><i class="iconfont iconleft"></i>ConstraintLayout用法小结</a>
+    <a href="/2021/01/05/Android%E4%BB%A3%E7%A0%81%E6%B7%B7%E6%B7%86/">Android代码混淆<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%8A%A0%E8%BD%BD%E7%BD%91%E9%A1%B5"><span class="toc-text">1、加载网页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%94%AF%E6%8C%81H5%E5%AE%9A%E4%BD%8D"><span class="toc-text">2、支持H5定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%94%AF%E6%8C%81%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-text">3、支持文件下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-text">4、错误处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E6%94%AF%E6%8C%81%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE"><span class="toc-text">5、支持视频播放</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright">路漫漫其修远兮，吾将上下而求索</div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LiveData - Mr.Ding的博客</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="&emsp;&emsp;Android为我们提供了Li...">
+  <meta name="author" content="Mr.Ding">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/tomorrow-night.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '/images/theme/welcome.jpg',
+          api: ''
+        },
+        motto: {
+          default: 'If you have a dream,you got to protect it.',
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        model: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+    </div>
+    <div class="center">LiveData</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+
+<nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright">路漫漫其修远兮，吾将上下而求索</div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/android.jpeg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">LiveData</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 14, 2021</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2110</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <p>&emsp;&emsp;Android为我们提供了LiveData组件，帮助我们完成ViewModel与页面组件之间的通信。通过LiveData，当ViewModel中的数据发生变化时，Activity能自动收到通知，从而更新UI。<br>&emsp;&emsp;LiveData可以包含任何类型的数据，并在数据发生变化的时候通知给观察者。</p>
+<h2 id="1、基本用法"><a href="#1、基本用法" class="headerlink" title="1、基本用法"></a>1、基本用法</h2><p>&emsp;&emsp;LiveData组件的用法很简单，首先我们在ViewModel中定义一个LiveData的变量：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainViewModel</span></span>(defaultNum: <span class="hljs-built_in">Int</span>): ViewModel() &#123;<br>  <span class="hljs-keyword">var</span> count = MutableLiveData&lt;<span class="hljs-built_in">Int</span>&gt;()<br>  <span class="hljs-keyword">init</span> &#123;<br>    count.value = defaultNum<br>  &#125;<br>  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">plusOne</span><span class="hljs-params">()</span></span> &#123;<br>    <span class="hljs-keyword">val</span> value = count.value ?: <span class="hljs-number">0</span><br>    count.value = value + <span class="hljs-number">1</span>  <span class="hljs-comment">//如果在UI线程中，使用setValue()方法；在非UI线程中，则使用postValue()方法</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后在Activity中监听数据的变化：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> viewModel = ViewModelProviders.of(<span class="hljs-keyword">this</span>, MainViewModelFactory(<span class="hljs-number">10</span>))<br>  .<span class="hljs-keyword">get</span>(MainViewModel::<span class="hljs-keyword">class</span>.java)<br>viewModel.count.observe(<span class="hljs-keyword">this</span>, Observer &#123; t -&gt;<br>  <span class="hljs-comment">//参数t就是ViewModel中count.value的值</span><br>&#125;)<br><br><span class="hljs-comment">//在按钮的点击事件中调用plusOne()方法</span><br>viewModel.plusOne()  <br></code></pre></td></tr></table></figure>
+<h2 id="2、observeForever"><a href="#2、observeForever" class="headerlink" title="2、observeForever()"></a>2、observeForever()</h2><p>&emsp;&emsp;LiveData还提供了一个observeForever()方法，使用方法与observe()没有太大差别，区别主要在于，当LiveData包装的数据发生变化时，无论页面处于什么状态，observeForever()都能收到通知。所以，在使用完之后，一定要记得调用removeObserver()方法来停止对LiveData的观察，否则LiveData会一直处于激活状态，对应的Activity永远不会被系统自动回收。</p>
+<h2 id="3、转换方法"><a href="#3、转换方法" class="headerlink" title="3、转换方法"></a>3、转换方法</h2><p>&emsp;&emsp;LiveData为了能够应对各种不同的需求，提供了两种转换方法，map()和switchMap()方法，下面我们来一一介绍。</p>
+<h3 id="3-1、map"><a href="#3-1、map" class="headerlink" title="3.1、map"></a>3.1、map</h3><p>&emsp;&emsp;map()方法的作用是将实际包含数据的LiveData和仅用于观察数据的LiveData进行转换。<br>&emsp;&emsp;比如有个User的类：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span></span>(<span class="hljs-keyword">var</span> name: String,<span class="hljs-keyword">var</span> age: <span class="hljs-built_in">Int</span>) &#123;&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;如果Activity中只关心name，而不关心age的话，将整个User类型的LiveData暴露给外部，就显得不那么合适了，我们可以使用map来进行数据的转换：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainViewModel</span></span>(): ViewModel() &#123;<br>  <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> userLiveData = MutableLiveData&lt;User&gt;()<br>  <span class="hljs-keyword">val</span> userName: LiveData&lt;String&gt; = Transformations.map(userLiveData, &#123;<br>    it.name<br>  &#125;)<br>  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">createUser</span><span class="hljs-params">()</span></span> &#123;<br>     userLiveData.value = User(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">18</span>)<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;上面调用了Transformations的map()方法来对LiveData的数据进行转换，它接收两个参数：参数一是原始的LiveData对象，参数二是一个转换函数，我们在这个函数里面写上具体转换逻辑即可。<br>&emsp;&emsp;同时我们讲userLiveData声明成private，以保证数据的封装性。当userLiveData数据发生变化时，map()方法监听到变化并执行转换逻辑，然后将转换后的数据通知给userName的观察者。</p>
+<p>&emsp;&emsp;Activity里面就只用监听userName即可：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">viewModel.userName.observe(<span class="hljs-keyword">this</span>, Observer &#123; t -&gt;<br>  binding.tvUserName = t.toString()<br>&#125;)<br>viewModel.createUser() <span class="hljs-comment">//可以在某个按钮点击事件中触发userLiveData的改变</span><br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jetpack/" rel="tag">Jetpack</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2021/01/15/Material-Design-%E6%BB%91%E5%8A%A8%E8%8F%9C%E5%8D%95/"><i class="iconfont iconleft"></i>Material Design-滑动菜单</a>
+    <a href="/2021/01/14/ViewModel/">ViewModel<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">1、基本用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81observeForever"><span class="toc-text">2、observeForever()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%BD%AC%E6%8D%A2%E6%96%B9%E6%B3%95"><span class="toc-text">3、转换方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1%E3%80%81map"><span class="toc-text">3.1、map</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"></div>
+  
+    <div class="footer-copyright">路漫漫其修远兮，吾将上下而求索</div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
